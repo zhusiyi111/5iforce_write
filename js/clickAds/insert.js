@@ -1,4 +1,4 @@
-
+ 
 
 // 加载广告列表  主要改动：修改请求弹窗内容 
 window.loadClickList = function(pagenum){
