@@ -2,20 +2,6 @@
 
 
 
-
-I.get('setNowTask',function(data, sender, sendResponse){
-	console.log(data);
-	sendResponse('task ok');
-})
-
-I.get('fuck',function(data,sender,sendResponse){
-	console.log(data);
-	setTimeout(function(){
-		sendResponse('fuck u too')
-	},5000);
-	
-})
-
 I.get('updateInfo',function(data,sender,sendResponse){
 	$.ajax({
 		url:'http://localhost:3002/task/updateInfo',

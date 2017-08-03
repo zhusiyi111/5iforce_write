@@ -81,16 +81,20 @@ function uploadInfo(){
 
 			var website = data;
 
+			var obj = {
+				need:need,
+				imgStr:imgStr,
+				lastRequest:lastRequest,
+				adUrl:adUrl,
+				adText:adText,
+				website:website,
+				time:new Date().toLocaleString()
+			}
+			console.log('update',obj);
+
 			I.ajax({
 				method:'updateInfo',
-				data:{
-					need:need,
-					imgStr:imgStr,
-					lastRequest:lastRequest,
-					adUrl:adUrl,
-					adText:adText,
-					website:website
-				},
+				data:obj,
 				success:function(data){
 					console.log(data);
 				}
@@ -152,10 +156,6 @@ function fillAnswer(){
 	
 
 }
-
-$(document).delegate('.working_3','click',function(){
-	fillAnswer();
-})
 
 
 
